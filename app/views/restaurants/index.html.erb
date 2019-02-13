@@ -1,0 +1,11 @@
+<h1>Restaurants List</h1>
+<h2>All the restaurants you need!</h2>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <br>
+    <li>
+      <p><%= " #{restaurant.name} - #{restaurant.category}  " %><%= link_to '<i class="fas fa-info-circle"></i>'.html_safe, restaurant_path(restaurant) %></p>
+    </li>
+  <% end %>
+</ul>
+<p><%= link_to '+ add a restaurant', new_restaurant_path %></p>

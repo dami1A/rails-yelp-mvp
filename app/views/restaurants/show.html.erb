@@ -1,0 +1,7 @@
+<h1><%= @restaurant.name %></h1>
+<div>
+  <p> Address : <%= @restaurant.address %></p>
+  <p> Phone Number : <%= @restaurant.phone_number %></p>
+  <p> Category : <%= @restaurant.category %></p>
+  <%= link_to '<i class="fa fa-chevron-circle-left"></i> back'.html_safe, restaurants_path %>
+</div>
