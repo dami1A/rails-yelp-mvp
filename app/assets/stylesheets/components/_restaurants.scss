@@ -1,0 +1,33 @@
+// Place all the styles related to the Restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ul {
+  list-style-type: none;
+}
+li {
+  border: solid 1px;
+  border-color: rgb(230,230,230);
+  padding: 10px;
+  margin: 0 10px;
+}
+
+li:hover {
+  border-color: rgb(200,200,200);
+  background-color: rgb(230,230,230);
+}
+
+.container {
+  text-align: left;
+  justify-content: left;
+}
+
+.resto_card {
+  border: solid 1px;
+  border-color: rgb(230,230,230);
+  padding: 10px;
+  margin: 10px;
+}
+.resto_card:hover {
+  border-color: rgb(200,200,200);
+  background-color: rgb(230,230,230);
+}

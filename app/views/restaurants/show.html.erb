@@ -1,7 +1,14 @@
 <h1><%= @restaurant.name %></h1>
-<div>
+<div class= "resto_card">
   <p> Address : <%= @restaurant.address %></p>
   <p> Phone Number : <%= @restaurant.phone_number %></p>
   <p> Category : <%= @restaurant.category %></p>
-  <%= link_to '<i class="fa fa-chevron-circle-left"></i> back'.html_safe, restaurants_path %>
+  <%= link_to '<i class="fa fa-chevron-circle-left"></i> back'.html_safe, restaurants_path %> | <%= link_to '<i class="fas fa-edit"></i> add a review'.html_safe, new_restaurant_review_path(@restaurant) %>
 </div>
+<h3>Reviews</h3>
+<% @reviews.each do |review| %>
+  <div class="review">
+    <p><%= review.content %></p>
+    <p><%="Rating : #{review.rating}  " %></p>
+  </div>
+<% end %>

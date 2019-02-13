@@ -1,4 +1,12 @@
-<%= simple_form_for [@restaurant, @review] do |f| %>
-  <%= f.input :content %>
-  <%= f.submit "add a review", class: "btn btn-primary" %>
-<% end %>
+<h1 class="text-center">Add a review!</h1>
+<div class="row">
+  <div class="col-sm-6 col-md-6 col-md-offset-3">
+    <%= simple_form_for [@restaurant, @review] do |f| %>
+      <%= f.input :content, placeholder: 'express yourself!'  %>
+      <%= f.input :rating, placeholder: '0, 1, 2, 3, 4 or 5', collection: Review::RATES %>
+      <%= f.submit "add a review", class: 'btn btn-success' %>
+    <% end %>
+    <br>
+    <%= link_to '<i class="fa fa-chevron-circle-left"></i> back'.html_safe, restaurant_path(@restaurant) %>
+  </div>
+</div>

@@ -7,7 +7,15 @@ ul {
   margin: 10px;
 }
 
-.container {
+.review {
   text-align: left;
   justify-content: left;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(200,200,200);
+}
+
+.review:hover {
+  border-color: rgb(200,200,200);
+  background-color: rgb(230,230,230);
 }
